@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- My Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Animated Background -->
+        <div class="background-decoration" id="bgDecoration"></div>
+
+        <div class="invitation-wrapper">
+            <div class="container">
+                <div class="top-wave"></div>
+                <div class="bottom-wave"></div>
+
+                <!-- Header -->
+                <div class="header">
+                    <div class="header-ornament">💖</div>
+                    <h1>You're Invited</h1>
+                    <p class="subtitle">Join My Celebration</p>
+                </div>
+
+                <!-- Photo Section -->
+                <div class="photo-section">
+                    <div class="photo-frame">
+                        <div class="photo-container">
+                            <img src="cele 1.jpeg" alt="Celebrant Photo" id="celebrantPhoto">
+                            <span class="photo-placeholder" id="photoPlaceholder">👸</span>
+                        </div>
+                    </div>
+                    <div class="celebrant-name">Neyla Faizza Tyasti Helmi</div>
+                    <div class="celebrant-age">UNOFFICIAL CELEBRATION</div>
+                </div>
+
+                <!-- Content -->
+                <div class="content">
+                    <!-- Event Details -->
+                    <div class="section">
+                        <h2>Detail Acara</h2>
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <span class="icon">📅</span>
+                                <h3>Tanggal</h3>
+                                <p>Kamis<br>12 Februari 2026</p>
+                            </div>
+                            <div class="info-card">
+                                <span class="icon">🕐</span>
+                                <h3>Waktu</h3>
+                                <p>Pukul 09:30 WIB<br>s/d CAPEK</p>
+                            </div>
+                        </div>
+                        <div class="info-card" style="margin-top: 25px;">
+                            <span class="icon">📍</span>
+                            <h3>Lokasi Acara</h3>
+                            <p>SITI WALIDAH<br>
+                            UNIVERSITAS MUHAMMADIYAH SURAKARTA<br>
+                            CQRC+QMJ, masuk gerbang timur, Mendungan, Pabelan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57169<br>
+                            SUKOHARJO, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Countdown -->
+                    <div class="section">
+                        <h2>Hitung Mundur</h2>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="number" id="days">00</span>
+                                <span class="label">Hari</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="number" id="hours">00</span>
+                                <span class="label">Jam</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="number" id="minutes">00</span>
+                                <span class="label">Menit</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="number" id="seconds">00</span>
+                                <span class="label">Detik</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Message -->
+                    <div class="section">
+                        <div class="message">
+                            <p>Satu tahap besar sudah terlewati, dan aku ingin menutup bab ini bareng orang-orang yang bikin masa kuliahku jadi lebih berwarna. Nggak perlu bawa apa-apa, cukup bawa diri dan energi paling seru kalian buat foto-foto bareng (tapi kalau bawa juga aku nggak nolak kok hehehe). Terima Kasih untuk semua ya, Kehadiranmu pasti akan sangat berarti untukku.</p>
+                            <p>Biar aku nggak celingak-celinguk nungguin, jika berkenan kasih tau aku ya kalau kamu bisa join atau berhalangan hadir lewat form di bawah ini.</p>
+                            <p>"See you on the celebration!"</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- RSVP Form -->
+                    <div class="rsvp-section">
+                        <h2>💌 Konfirmasi Kehadiran</h2>
+                        <p class="subtitle"></p>
+                        
+                        <form id="rsvpForm">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap *</label>
+                                <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <label for="phone">Nomor WhatsApp *</label>
+                                <input type="tel" id="phone" name="phone"  placeholder="Contoh: 081234567890">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com (opsional)">
+                            </div> -->
+
+                            <div class="form-group">
+                                <label>Apakah Anda akan hadir? *</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="attend-yes" name="attendance" value="hadir" required>
+                                        <label for="attend-yes">✅ Ya, saya akan hadir</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="attend-no" name="attendance" value="tidak hadir" required>
+                                        <label for="attend-no">❌ Maaf, saya tidak bisa hadir</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <label for="guests">Jumlah Tamu yang Hadir</label>
+                                <select id="guests" name="guests">
+                                    <option value="1">1 Orang</option>
+                                    <option value="2">2 Orang</option>
+                                    <option value="3">3 Orang</option>
+                                    <option value="4">4 Orang</option>
+                                    <option value="5">5+ Orang</option>
+                                </select>
+                            </div> -->
+
+                            <div class="form-group">
+                                <label for="message">Ucapan & Doa (Opsional)</label>
+                                <textarea id="message" name="message" placeholder="Tuliskan ucapan atau doa Anda di sini..."></textarea>
+                            </div>
+
+                            <div class="button-group">
+                                <button type="submit" class="btn btn-primary">
+                                    <span>💕 Kirim Konfirmasi via WhatsApp</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="success-message" id="successMessage">
+                            ✅ Terima kasih! Konfirmasi Anda akan dikirim melalui WhatsApp.
+                        </div>
+                    </div>
+
+                    <!-- Additional Buttons -->
+                    <div class="button-group" style="margin-top: 50px;">
+                        <a href="https://maps.app.goo.gl/MRLBh57J5xQG97ip8" target="_blank" class="btn btn-secondary">
+                            <span>🗺️ Lihat Lokasi di Maps</span>
+                        </a>
+                        <button class="btn btn-secondary" onclick="addToCalendar()">
+                            <span>📆 Tambah ke Kalender</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    <p class="closing">Can't wait to celebrate with you!</p>
+                    <p class="signature">With Love & Joy</p>
+                    <div class="ornament-bottom">💕 ✨ 💕</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Create animated background elements
+            function createBackgroundElements() {
+                const bgDecoration = document.getElementById('bgDecoration');
+                
+                // Create floating hearts
+                for (let i = 0; i < 20; i++) {
+                    const heart = document.createElement('div');
+                    heart.className = 'floating-heart';
+                    heart.textContent = ['💕', '💖', '💗', '💝'][Math.floor(Math.random() * 4)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDelay = Math.random() * 15 + 's';
+                    heart.style.animationDuration = (Math.random() * 8 + 12) + 's';
+                    bgDecoration.appendChild(heart);
+                }
+                
+                // Create sparkles
+                for (let i = 0; i < 30; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = Math.random() * 100 + '%';
+                    sparkle.style.top = Math.random() * 100 + '%';
+                    sparkle.style.animationDelay = Math.random() * 3 + 's';
+                    bgDecoration.appendChild(sparkle);
+                }
+            }
+
+            createBackgroundElements();
+
+            // Handle photo loading
+            window.addEventListener('load', function() {
+                const photo = document.getElementById('celebrantPhoto');
+                const placeholder = document.getElementById('photoPlaceholder');
+                
+                photo.onerror = function() {
+                    photo.style.display = 'none';
+                    placeholder.style.display = 'block';
+                };
+                
+                photo.onload = function() {
+                    placeholder.style.display = 'none';
+                    photo.style.display = 'block';
+                };
+                
+                if (photo.complete) {
+                    if (photo.naturalHeight === 0) {
+                        photo.style.display = 'none';
+                        placeholder.style.display = 'block';
+                    } else {
+                        placeholder.style.display = 'none';
+                        photo.style.display = 'block';
+                    }
+                }
+            });
+
+            // Countdown Timer
+            // const eventDate = new Date('2026-03-15T18:00:00').getTime();
+            const eventDate = new Date('2026-02-12T09:30:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance < 0) {
+                    document.querySelector('.countdown').innerHTML = '<p style="color: var(--pink-primary); font-size: 1.8em; font-weight: bold;">🎉 Acara Sedang Berlangsung! 🎉</p>';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // RSVP Form Handler with WhatsApp Integration
+            document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                // const phone = document.getElementById('phone').value;
+                // const email = document.getElementById('email').value;
+                const attendance = document.querySelector('input[name="attendance"]:checked').value;
+                // const guests = document.getElementById('guests').value;
+                const message = document.getElementById('message').value;
+
+                // Format pesan WhatsApp
+                let whatsappMessage = `*KONFIRMASI KEHADIRAN - CELEBRATION*\n\n`;
+                whatsappMessage += `Nama: ${name}\n`;
+                // if (phone)whatsappMessage += `No. WhatsApp: ${phone}\n`;
+                // if (email) whatsappMessage += `Email: ${email}\n`;
+                whatsappMessage += `Status Kehadiran: ${attendance.toUpperCase()}\n`;
+                // whatsappMessage += `Jumlah Tamu: ${guests} orang\n`;
+                if (message) whatsappMessage += `\nUcapan & Doa:\n${message}\n`;
+                whatsappMessage += `\n💕 Dikirim melalui undangan digital 💕`;
+
+                // Ganti dengan nomor WhatsApp penyelenggara acara (format: 628xxx tanpa +)
+                const organizerPhone = '6285741482395'; // GANTI DENGAN NOMOR WHATSAPP ANDA
+                
+                // Encode pesan untuk URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                
+                // Buka WhatsApp
+                const whatsappURL = `https://wa.me/${organizerPhone}?text=${encodedMessage}`;
+                
+                // Show success message
+                const successMsg = document.getElementById('successMessage');
+                successMsg.classList.add('show');
+                
+                // Redirect ke WhatsApp setelah delay
+                setTimeout(() => {
+                    window.open(whatsappURL, '_blank');
+                    // Reset form
+                    this.reset();
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
+                }, 1000);
+            });
+
+            // Add to Calendar Function
+            function addToCalendar() {
+                const eventTitle = 'Celebration - Neyla Faizza Tyasti Helmi';
+                const eventLocation = 'Siti Walidah,Universitas Muhammdiyah Surakarta,Sukoharjo';
+                const eventDescription = 'Join us for celebration!';
+                const startDate = '20260212T093000';
+                const endDate = '20260212T120000';
+
+                // Google Calendar URL
+                const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
+                
+                window.open(googleCalendarUrl, '_blank');
+            }
+
+            // Smooth scroll animation observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        </script>
+</body>
+</html>
